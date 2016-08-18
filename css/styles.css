@@ -1,0 +1,148 @@
+.wrapper {
+  width: 100%;
+  display: block;
+  float: left;
+  margin-top: 50px;
+  position: relative;
+}
+.sider-banner {
+  margin: 0 auto;
+  height: 50px;
+  background-color: #fff;
+  position: relative;
+}
+.sider-banner .banner-block {
+  width: 30px;
+  height: 50px;
+  margin-left: 1px;
+  margin-right: 1px;
+  background-color: #041838;
+  display: block;
+  float: left;
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.sider-banner .banner-block .main-block {
+  width: 100%;
+  height: 50px;
+}
+.sider-banner .banner-block .letter-slider {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.sider-banner .banner-block .letter-slider span {
+  display: block;
+  float: left;
+  width: 100%;
+  height: 50px;
+  margin-top: 7px;
+  background-color: transparent;
+  text-align: center;
+  font-family: tt-r;
+  font-size: 19px;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 50px;
+  background-color: #092a5e;
+  border-radius: 4px;
+}
+.sider-banner .banner-block .letter-slider span:first-child {
+  margin-top: 0px;
+}
+.sider-banner .banner-block::before {
+  content: '';
+  position: absolute;
+  top: 22px;
+  left: 2px ;
+  width: 1px;
+  height: 5px;
+  background-color: #8495af;
+  display: block;
+  z-index: 2000;
+}
+.sider-banner .banner-block::after {
+  content: '';
+  position: absolute;
+  top: 22px;
+  right: 2px ;
+  width: 1px;
+  height: 5px;
+  background-color: #8495af;
+  display: block;
+  z-index: 2000;
+}
+.sider-banner .banner-block.down::before {
+  -webkit-animation: downmovebd 2s;
+  animation: downmovebd 2s;
+}
+@-webkit-keyframes downmovebd {
+  0% {
+    top: 22px;
+  }
+  50% {
+    top: 19px;
+  }
+  100% {
+    top: 22px;
+  }
+}
+.sider-banner .banner-block.down::after {
+  -webkit-animation: upmovead 2s;
+  animation: upmovead 2s;
+}
+@-webkit-keyframes upmovead {
+  0% {
+    top: 22px;
+  }
+  50% {
+    top: 25px;
+  }
+  100% {
+    top: 22px;
+  }
+}
+.sider-banner .banner-block.up::after {
+  -webkit-animation: upmoveau 2s;
+  animation: upmoveau 2s;
+}
+@-webkit-keyframes upmoveau {
+  0% {
+    top: 22px;
+  }
+  50% {
+    top: 25px;
+  }
+  100% {
+    top: 22px;
+  }
+}
+.sider-banner .banner-block.up::before {
+  -webkit-animation: downmovebu 2s;
+  animation: downmovebu 2s;
+}
+@-webkit-keyframes downmovebu {
+  0% {
+    top: 22px;
+  }
+  50% {
+    top: 19px;
+  }
+  100% {
+    top: 22px;
+  }
+}
+.sider-banner:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 25px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
